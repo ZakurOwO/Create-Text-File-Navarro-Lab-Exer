@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,17 @@ namespace Create_Text_File_Navarro_Lab_Exer
             Form2 frm = new Form2();
             frm.ShowDialog();
 
-            string 
+            string getInput = txtinput.Text;
+
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, Form2.SetFileName)))
+            {
+                outputFile.WriteLine(getInput);
+                Console.WriteLine(getInput);
+
+                MessageBox.Show("File Created Successfully!" + docPath);
+            }
         }
     }
 }
