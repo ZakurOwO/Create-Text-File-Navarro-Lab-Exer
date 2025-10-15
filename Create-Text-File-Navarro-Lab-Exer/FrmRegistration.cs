@@ -54,7 +54,8 @@ namespace Create_Text_File_Navarro_Lab_Exer
             
 
             string fileName = studentNo + ".txt";
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string docPath = Path.Combine(Application.StartupPath, "Navarro_John_Daniel_LabStream");
+            Directory.CreateDirectory(docPath);
 
 
             string[] info =
