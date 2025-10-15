@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;    
 
 namespace Create_Text_File_Navarro_Lab_Exer
 {
@@ -32,8 +33,15 @@ namespace Create_Text_File_Navarro_Lab_Exer
 
         }
 
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            
+
+            
+
+
             string studentNo = txtStudentNumber.Text.Trim();
             string lastName = txtLastName.Text.Trim();
             string firstName = txtFirstName.Text.Trim();
@@ -47,6 +55,29 @@ namespace Create_Text_File_Navarro_Lab_Exer
 
             string fileName = studentNo + ".txt";
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+
+            string[] info =
+            {
+                "Student Number: " + studentNo,
+                "Last Name: " + lastName,
+                "First Name: " + firstName,
+                "Middle Initial: " + middleInitial,
+                "Age: " + age,
+                "Gender: " + gender,
+                "Course: " + course,
+                "Contact Number: " + contact,
+                "Birthdate: " + birthdate
+            };
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, fileName)))
+            {
+                foreach (string line in info)
+                {
+                    outputFile.WriteLine(line);
+                }
+                MessageBox.Show("File Created Successfully!" + docPath);
+            }
         }
     }
 }
