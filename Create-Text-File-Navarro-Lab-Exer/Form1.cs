@@ -16,5 +16,18 @@ namespace Create_Text_File_Navarro_Lab_Exer
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.ShowDialog();
+
+            string 
+        }
     }
 }

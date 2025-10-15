@@ -61,6 +61,7 @@
             this.btnOkay.TabIndex = 2;
             this.btnOkay.Text = "Okay";
             this.btnOkay.UseVisualStyleBackColor = true;
+            this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
             // 
             // Form2
             // 
@@ -72,6 +73,7 @@
             this.Controls.Add(this.txtFileName);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
