@@ -46,12 +46,14 @@
             // 
             // btnOpen
             // 
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.btnOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.btnOpen.Location = new System.Drawing.Point(247, 288);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(102, 32);
             this.btnOpen.TabIndex = 1;
             this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // openFileDialog1
@@ -62,6 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Create_Text_File_Navarro_Lab_Exer.Properties.Resources.Penacony___Honkai_Star_Rail;
             this.ClientSize = new System.Drawing.Size(616, 332);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.lvShowText);

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Create_Text_File_Navarro_Lab_Exer
 {
@@ -16,6 +9,28 @@ namespace Create_Text_File_Navarro_Lab_Exer
         public FrmStudentRecord()
         {
             InitializeComponent();
+        }
+
+        private void FrmStudentRecord_Load(object sender, EventArgs e)
+        {
+            lvShowText1.View = View.Details;
+            lvShowText1.Columns.Clear();
+            lvShowText1.Columns.Add("Student Records", 400);
+        }
+
+        public void LoadStudentRecord(string filePath)
+        {
+            lvShowText1.Items.Clear();
+
+            if (File.Exists(filePath))
+            {
+                using (StreamReader reader = File.OpenText(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                        lvShowText1.Items.Add(new ListViewItem(line));
+                }
+            }
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -30,35 +45,17 @@ namespace Create_Text_File_Navarro_Lab_Exer
             openFileDialog1.InitialDirectory = @"C:\";
             openFileDialog1.Title = "Find Student Text File";
             openFileDialog1.DefaultExt = "txt";
+            openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string path = openFileDialog1.FileName;
-                lvShowText1.Items.Clear();
-
-                using (System.IO.StreamReader streamReader = System.IO.File.OpenText(path))
-                {
-                    string line;
-                    while ((line = streamReader.ReadLine()) != null)
-                    {
-                        lvShowText1.Items.Add(new ListViewItem(line));
-                    }
-                }
-            }
+                LoadStudentRecord(openFileDialog1.FileName);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            FrmRegistration frm = new FrmRegistration();
+            NewRegistration frm = new NewRegistration();
             frm.Show();
             this.Hide();
-        }
-
-        private void FrmStudentRecord_Load(object sender, EventArgs e)
-        {
-            lvShowText1.View = View.Details;
-            lvShowText1.Columns.Clear();
-            lvShowText1.Columns.Add("Student Records", 400);
         }
     }
 }

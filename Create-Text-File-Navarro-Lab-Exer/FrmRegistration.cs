@@ -91,9 +91,7 @@ namespace Create_Text_File_Navarro_Lab_Exer
 
         private void BtnRecord_Click(object sender, EventArgs e)
         {
-            FrmStudentRecord frm2 = new FrmStudentRecord();
-            frm2.Show();
-            this.Hide();
+            
         }
     }
 }

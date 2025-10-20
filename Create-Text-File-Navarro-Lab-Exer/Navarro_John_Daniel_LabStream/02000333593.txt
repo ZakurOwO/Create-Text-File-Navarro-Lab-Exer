@@ -1,0 +1,9 @@
+Student Number: 02000333593
+Last Name: Navarro
+First Name: Danielle
+Middle Initial: B
+Age: 20
+Gender: Female
+Course: BSIT
+Contact Number: 099999999999
+Birthdate: Wednesday, April 6, 2005
