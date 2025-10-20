@@ -176,6 +176,7 @@
             this.txtProgram.Name = "txtProgram";
             this.txtProgram.Size = new System.Drawing.Size(172, 20);
             this.txtProgram.TabIndex = 31;
+            this.txtProgram.TextChanged += new System.EventHandler(this.txtProgram_TextChanged_1);
             // 
             // txtAge
             // 
