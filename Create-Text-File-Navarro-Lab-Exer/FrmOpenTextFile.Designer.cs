@@ -1,0 +1,71 @@
+﻿namespace Create_Text_File_Navarro_Lab_Exer
+{
+    partial class FrmOpenTextFile
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.LV = new System.Windows.Forms.ListView();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // LV
+            // 
+            this.LV.HideSelection = false;
+            this.LV.Location = new System.Drawing.Point(12, 30);
+            this.LV.Name = "LV";
+            this.LV.Size = new System.Drawing.Size(592, 223);
+            this.LV.TabIndex = 0;
+            this.LV.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(247, 288);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(102, 32);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            // 
+            // FrmOpenTextFile
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(616, 332);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.LV);
+            this.Name = "FrmOpenTextFile";
+            this.Text = "FrmOpenTextFile";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ListView LV;
+        private System.Windows.Forms.Button btnOpen;
+    }
+}
