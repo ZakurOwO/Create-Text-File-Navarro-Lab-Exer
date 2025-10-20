@@ -16,7 +16,7 @@ namespace Create_Text_File_Navarro_Lab_Exer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmOpenTextFile());
+            Application.Run(new FrmStudentRecord());
         }
     }
 }

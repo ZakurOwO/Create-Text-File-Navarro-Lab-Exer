@@ -48,6 +48,7 @@
             this.txtContactNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.BtnRecord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -253,12 +254,26 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // BtnRecord
+            // 
+            this.BtnRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.BtnRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BtnRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.BtnRecord.Location = new System.Drawing.Point(578, 336);
+            this.BtnRecord.Name = "BtnRecord";
+            this.BtnRecord.Size = new System.Drawing.Size(111, 42);
+            this.BtnRecord.TabIndex = 21;
+            this.BtnRecord.Text = "Record";
+            this.BtnRecord.UseVisualStyleBackColor = false;
+            this.BtnRecord.Click += new System.EventHandler(this.BtnRecord_Click);
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Create_Text_File_Navarro_Lab_Exer.Properties.Resources.Penacony___Honkai_Star_Rail;
             this.ClientSize = new System.Drawing.Size(722, 390);
+            this.Controls.Add(this.BtnRecord);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtContactNo);
             this.Controls.Add(this.label10);
@@ -309,5 +324,6 @@
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button BtnRecord;
     }
 }

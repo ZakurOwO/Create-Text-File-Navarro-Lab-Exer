@@ -43,9 +43,8 @@ namespace Create_Text_File_Navarro_Lab_Exer
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            //DisplayToList();
+            DisplayToList();
 
-            FrmStudentRecord new frm1 = new FrmStudentRecord();
         }
     }
 }
